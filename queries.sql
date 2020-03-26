@@ -26,5 +26,7 @@ set PostalCode = "11122"
 where CustomerName = "The Shire";
 
 -- (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
+SELECT COUNT ( DISTINCT city ) as "Number of Cities" from Customers;
 
 -- (Stretch) Find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name
+SELECT * from Suppliers where length(SupplierName) > 20;
